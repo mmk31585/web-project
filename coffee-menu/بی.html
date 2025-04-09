@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&display=swap" rel="stylesheet">
+    <title>Coffe Menu</title>
+    <style>
+        body {
+            font-family: Vazirmatn, sans-serif;
+            background: linear-gradient(135deg, #1A120B, #3C2F2F);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+            color: #F8F8F8;
+        }
+
+        .coffee-background {
+            background: url('./Img/coffee-pattern.png') no-repeat center center;
+            background-size: 50%;
+            opacity: 0.05;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        .playwrite-mx-guides-regular {
+            font-family: "Playwrite MX Guides", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-animate {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-animate::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-45deg);
+            transition: all 0.5s ease;
+        }
+
+        .btn-animate:hover::before {
+            left: 100%;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            background: #3C2F2F;
+            box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+            padding: 20px;
+            text-align: center;
+            color: #D4AF37;
+            font-size: 3rem;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        section#products {
+            max-width: 6xl;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .product {
+            background-color: #3F3F3F;
+            border-radius: 12px;
+            padding: 1rem;
+            width: 100%;
+            max-width: 400px;
+            height: 7rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .product:hover {
+            background-color: rgba(212, 175, 55, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(212, 175, 55, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .product img {
+            width: 4rem;
+        }
+
+        .product h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #D4AF37;
+        }
+
+        .product p {
+            font-size: 1rem;
+            color: #F8F8F8;
+        }
+
+        .product .price {
+            font-size: 1.25rem;
+            color: #D4AF37;
+            font-weight: bold;
+        }
+
+        .btn-animate {
+            background: linear-gradient(135deg, #D4AF37, #FBBF24);
+            color: white;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-animate:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-animate:active {
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coffee-background"></div>
+
+    <header>
+        <h1>منو کافه</h1>
+    </header>
+
+    <section id="products">
+        <div class="product">
+            <img src="./Img/7.png" alt="Espresso">
+            <div>
+                <h1>اسپرسو</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="price">35,000 تومان</div>
+        </div>
+
+        <div class="product">
+            <img src="./Img/1.png" alt="Latte">
+            <div>
+                <h1>لاته</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="price">40,000 تومان</div>
+        </div>
+
+        <div class="product">
+            <img src="./Img/9.png" alt="Americano">
+            <div>
+                <h1>آمریکانو</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="price">85,000 تومان</div>
+        </div>
+
+        <div class="product">
+            <img src="./Img/11.png" alt="Macchiato">
+            <div>
+                <h1>ماچو</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="price">65,000 تومان</div>
+        </div>
+
+        <div class="product">
+            <img src="./Img/12.png" alt="Cappuccino">
+            <div>
+                <h1>کاپوچینو</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="price">50,000 تومان</div>
+        </div>
+
+        <!-- Add more products here -->
+    </section>
+
+    <button onclick="highlightRandomProduct()" class="btn-animate">
+        پیشنهاد نوشیدنی خوشمزه 🍹
+    </button>
+
+    <script>
+        let isHighlighting = false;
+        let timeoutId;
+
+        function highlightRandomProduct() {
+            if (isHighlighting) return;
+
+            const products = document.querySelectorAll(".product");
+            const randomIndex = Math.floor(Math.random() * products.length);
+            const selected = products[randomIndex];
+
+            isHighlighting = true;
+
+            // افکت fade-in با Tailwind animation
+            selected.classList.add("animate-fadeIn");
+
+            products.forEach((p) => {
+                if (p !== selected) {
+                    p.classList.add("blur-sm", "opacity-50", "pointer-events-none");
+                } else {
+                    p.classList.add(
+                        "scale-110",
+                        "ring-4",
+                        "ring-yellow-400",
+                        "z-10",
+                        "relative",
+                        "shadow-2xl",
+                        "bg-yellow-50"
+                    );
+                    p.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
+            });
+
+            // حذف افکت‌ها
+            function clearEffects(e) {
+                if (e && (selected.contains(e.target) || e.target.closest("button"))) return;
+
+                clearTimeout(timeoutId);
+                products.forEach((p) =>
+                    p.classList.remove(
+                        "blur-sm",
+                        "opacity-50",
+                        "pointer-events-none",
+                        "scale-110",
+                        "ring-4",
+                        "ring-yellow-400",
+                        "z-10",
+                        "relative",
+                        "shadow-2xl",
+                        "bg-yellow-50",
+                        "animate-fadeIn"
+                    )
+                );
+                isHighlighting = false;
+                document.removeEventListener("click", clearEffects);
+            }
+
+            timeoutId = setTimeout(() => clearEffects(null), 3000);
+            document.addEventListener("click", clearEffects);
+        }
+    </script>
+
+</body>
+
+</html>

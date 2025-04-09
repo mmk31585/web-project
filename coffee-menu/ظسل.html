@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Menu - Dark & Luxe</title>
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <!-- Playwrite MX Guides Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #1A120B 0%, #3C2F2F 50%, #4A2C2A 75%, #D4AF37 100%);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"%3E%3Ccircle cx="50" cy="50" r="2" fill="%23D4AF37"/%3E%3C/svg%3E');
+            pointer-events: none;
+        }
+
+        .playwrite-mx-guides-regular {
+            font-family: "Playwrite MX Guides", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-card {
+            animation: fadeInUp 0.5s ease-in-out;
+            animation-fill-mode: both;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animate-pulse-btn {
+            animation: pulse 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="text-white overflow-x-hidden flex flex-col justify-start items-center min-h-screen">
+    <header id="menuHeader"
+        class="fixed top-0 left-0 w-full z-50 bg-[#3C2F2F]/80 backdrop-blur-md shadow-lg shadow-[#D4AF37]/20 p-4 transition-all duration-500">
+        <h1
+            class="text-4xl font-extrabold text-center text-[#D4AF37] playwrite-mx-guides-regular animate-[fadeInUp_1s_ease-in-out]">
+            منو کافه</h1>
+    </header>
+
+    <section id="products" class="max-w-5xl flex flex-col justify-center items-center">
+        <div class="h-24"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full px-4 md:grid-cols-2">
+            <div id="product1"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.1s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/7.png" alt="expresso" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">اسپرسو</h1>
+                        <p class="text-base text-white">قهوه غلیظ و خوش‌عطر</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">35,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product2"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.2s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/1.png" alt="latte" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">لاته</h1>
+                        <p class="text-base text-white">قهوه و شیر ملایم</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">40,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product3"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.3s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/9.png" alt="americano" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">آمریکانو</h1>
+                        <p class="text-base text-white">قهوه رقیق و قوی</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">85,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product4"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.4s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/11.png" alt="macchiato" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">ماچو</h1>
+                        <p class="text-base text-white">اسپرسو با کف شیر</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">65,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product5"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.5s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/12.png" alt="cappuccino" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">کاپوچینو</h1>
+                        <p class="text-base text-white">قهوه با فوم غلیظ</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">50,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product6"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.6s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/10.png" alt="espresso" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">اسپرسو</h1>
+                        <p class="text-base text-white">قهوه غلیظ و تلخ</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">45,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product7"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.7s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/_Группа_.png" alt="tea" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">چایی</h1>
+                        <p class="text-base text-white">چای تازه دم</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">50,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product8"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.8s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/_Группа_ copy.png" alt="espresso" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">اسپرسو</h1>
+                        <p class="text-base text-white">قهوه کلاسیک</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">30,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+            <div id="product9"
+                class="flex items-center justify-between gap-6 w-full h-28 p-6 bg-[#3F3F3F]/80 border border-[#D4AF37]/50 rounded-xl hover:bg-[#D4AF37]/20 hover:scale-105 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-all duration-300 animate-card"
+                style="animation-delay: 0.9s;">
+                <div class="flex flex-row justify-start items-center gap-4">
+                    <img src="./Img/_Група_.png" alt="espresso" class="w-16">
+                    <div class="flex flex-col justify-around items-start h-[70%]">
+                        <h1 class="text-3xl font-bold text-[#D4AF37]">اسپرسو</h1>
+                        <p class="text-base text-white">قهوه قوی و غلیظ</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1">
+                    <h2 class="text-2xl font-bold text-[#D4AF37]">75,000 <span
+                            class="text-lg font-normal text-white">تومان</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="highlightRandomProduct()"
+            class="mt-10 px-8 py-4 bg-gradient-to-r from-[#D4AF37] to-[#FBBF24] text-[#1A120B] font-bold rounded-2xl shadow-xl shadow-[#D4AF37]/50 hover:from-[#FBBF24] hover:to-[#D4AF37] transition-all duration-300 transform hover:scale-105 animate-pulse-btn">
+            🍹 پیشنهاد نوشیدنی خوشمزه 🍹
+        </button>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
